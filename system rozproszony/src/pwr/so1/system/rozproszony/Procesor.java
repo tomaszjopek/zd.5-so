@@ -14,8 +14,7 @@ public class Procesor
 		obciazenie = 0;
 		procesy = new ArrayList<Zadanie>();
 		srednieObciazenie = 0;
-	}
-	
+	}	
 	
 
 }
