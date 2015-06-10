@@ -5,9 +5,17 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		Symulacja symulacja = new Symulacja(70, 65,20,1,90);
-		symulacja.generujZadania();
-		symulacja.wyswietl();
+		Symulacja symulacja = new Symulacja(70,20,50,10,1,90,25);
+		symulacja.start();
+		symulacja.zalozeniaSymulacji();
+		
+		symulacja.pierwszyAlgorytm();
+		symulacja.wypisz();
+		
+		symulacja.drugiAlgorytm();
+		symulacja.wypisz();
+		
+		
 		
 		
 	}

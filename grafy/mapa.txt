@@ -1,0 +1,13 @@
+Kutno,Warszawa,130
+Warszawa,Kutno,130
+Kutno,Poznañ,180
+Poznañ,Kutno,180
+Kutno,Kraków,300
+Kraków,Kutno,300
+Warszawa,Poznañ,320
+Poznañ,Warszawa,320
+Warszawa,Kraków,350
+Kraków,Warszawa,350
+Poznañ,Kraków,360
+Kraków,Poznañ,360
+
