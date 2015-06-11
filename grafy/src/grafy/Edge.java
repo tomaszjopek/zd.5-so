@@ -1,32 +1,25 @@
 package grafy;
 
 
-public class Edge 
+public class Edge<T> 
 {
-	private Vertex first;
-	private Vertex second;
-	
-	public Edge(Vertex first, Vertex second)
-	{
-		this.setFirst(first);
-		this.setSecond(second);
+	private final Vertex<T> end;
+    private final int weight;
+    
+    public Edge(Vertex<T> end, int weight)
+    {
+    	this.end = end;
+    	this.weight = weight; 
+    }
+
+	public Vertex<T> getEnd() {
+		return end;
 	}
 
-	public Vertex getFirst() {
-		return first;
+	public int getWeight() {
+		return weight;
 	}
 
-	public void setFirst(Vertex first) {
-		this.first = first;
-	}
 
-	public Vertex getSecond() {
-		return second;
-	}
-
-	public void setSecond(Vertex second) {
-		this.second = second;
-	}
-	
 
 }

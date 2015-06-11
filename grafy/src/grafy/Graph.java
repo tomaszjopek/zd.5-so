@@ -1,11 +1,15 @@
 	package grafy;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class Graph<T> 
 {
-	ArrayList<T> vertex = new ArrayList<T>();
-	ArrayList<Integer> edges = new ArrayList<Integer>();
+	
+
 	
 	
 	
