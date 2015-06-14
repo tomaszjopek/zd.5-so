@@ -1,25 +1,23 @@
 package grafy;
 
 
-public class Edge<T> 
+public class Edge
 {
-	private final Vertex<T> end;
-    private final int weight;
-    
-    public Edge(Vertex<T> end, int weight)
-    {
-    	this.end = end;
-    	this.weight = weight; 
-    }
-
-	public Vertex<T> getEnd() {
-		return end;
+	public Vertex start;
+	public Vertex end;
+	public double weight;
+	
+	public Edge(Vertex start, Vertex end, double weight)
+	{
+		this.start = start;
+		this.end = end;
+		this.weight = weight;		
 	}
-
-	public int getWeight() {
-		return weight;
+	
+	@Override
+	public String toString()
+	{
+		return start + " " + end + " " + weight;
 	}
-
-
 
 }

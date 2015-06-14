@@ -2,58 +2,51 @@ package grafy;
 
 import java.util.*;
 
-public class Vertex<T> implements Comparable<Vertex<T>>
+public class Vertex implements Comparable<Vertex>
 {
-	    private final T name;
-	    private List<Edge<T>> list;
-	    private int minDistance = Integer.MAX_VALUE;
-	    private Vertex<T> previous;
-	    
-	    public Vertex(T name)
-	    {
-	    	list = new ArrayList<Edge<T>>();
-	    	this.name = name;
-	    }
-	    
-	    public int getMinDistance()
-	    {
-	    	return minDistance;
-	    }
-	    
-	    public void setMinDistance(int newDistance)
-	    {
-	    	this.minDistance = newDistance;
-	    }
-	    
-	    public String toString()
-	    {
-	    	return (String)name;
-	    }
-	    	    
-	    public int compareTo(Vertex<T> v)
-	    {
-	        return Integer.compare(this.minDistance, v.getMinDistance());
-	    }
+	public String name;
+	public List<Vertex> neighbours;
+	public double minDistance = Double.POSITIVE_INFINITY;
+	public Vertex previous;
+	
+	public Vertex(String name)
+	{
+		this.name = name;
+		neighbours = new ArrayList<Vertex>();
+		previous = null;
+	}
+ 
 
+	@Override
+	public String toString()
+	{
+		return name;
+	}
 
-		public List<Edge<T>> getList() {
-			return list;
-		}
+	@Override
+	public int compareTo(Vertex v)
+	{
+		return this.name.compareTo(v.name);
+	}
+	
+	public static Comparator<Vertex> distanceComparator()
+	{
+		return new Comparator<Vertex>()
+				{
 
-
-		public void setList(List<Edge<T>> list) {
-			this.list = list;
-		}
-
-
-		public Vertex<T> getPrevious() {
-			return previous;
-		}
-
-
-		public void setPrevious(Vertex<T> previous) {
-			this.previous = previous;
-		}
-
+					@Override
+					public int compare(Vertex o1, Vertex o2) 
+					{
+						if(o1.minDistance < o2.minDistance)
+							return -1;
+						else if(o1.minDistance == o2.minDistance)
+							return 0;
+						else
+							return 1;
+						
+					}
+			
+				};
+	}
 		
 }

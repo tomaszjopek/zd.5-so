@@ -10,4 +10,3 @@ Warszawa,Kraków,350
 Kraków,Warszawa,350
 Poznañ,Kraków,360
 Kraków,Poznañ,360
-
