@@ -8,12 +8,14 @@ public class Vertex implements Comparable<Vertex>
 	public List<Vertex> neighbours;
 	public double minDistance = Double.POSITIVE_INFINITY;
 	public Vertex previous;
+	public boolean visited;
 	
 	public Vertex(String name)
 	{
 		this.name = name;
 		neighbours = new ArrayList<Vertex>();
 		previous = null;
+		visited = false;
 	}
  
 
