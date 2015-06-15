@@ -20,9 +20,9 @@ public class Procesor
 	{
 		obciazenie = 0;
 		
-		for(int i =0;i<procesy.size();i++)
+		for(Zadanie z : procesy)
 		{
-			obciazenie += procesy.get(i).zapotrzebowanie;
+			obciazenie += z.zapotrzebowanie;
 		}
 					
 	}
@@ -67,7 +67,6 @@ public class Procesor
 			procesy.get(k).czas--;
 		}		
 	}
-	
-	
+
 
 }
