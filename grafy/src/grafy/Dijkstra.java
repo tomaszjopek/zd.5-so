@@ -2,14 +2,7 @@ package grafy;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.TreeSet;
-
 
 public class Dijkstra 
 {
@@ -64,6 +57,7 @@ public class Dijkstra
 	
 	public void printPath(String target)
 	{
+		System.out.println("\nNAJKROTSZA SCIEZKA(DIJKSTRA)");		
 		Vertex destination = null;
 		for(Vertex v : vertexes)
 		{
@@ -104,8 +98,7 @@ public class Dijkstra
 			System.out.printf("-> %s ",wynik.get(i));
 		}
 		
-		System.out.println();
-		
+		System.out.println("\n");		
 	}
 	
 	private double distance(Vertex v1, Vertex v2)

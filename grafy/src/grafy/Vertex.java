@@ -4,14 +4,16 @@ import java.util.*;
 
 public class Vertex implements Comparable<Vertex>
 {
+	public int id;
 	public String name;
 	public List<Vertex> neighbours;
 	public double minDistance = Double.POSITIVE_INFINITY;
 	public Vertex previous;
 	public boolean visited;
 	
-	public Vertex(String name)
+	public Vertex(int id ,String name)
 	{
+		this.id = id;
 		this.name = name;
 		neighbours = new ArrayList<Vertex>();
 		previous = null;
@@ -24,6 +26,12 @@ public class Vertex implements Comparable<Vertex>
 	{
 		return name;
 	}
+	
+	public void print()
+	{
+		System.out.println(this.id + " - " + this.name);
+	}
+	
 
 	@Override
 	public int compareTo(Vertex v)
@@ -50,5 +58,6 @@ public class Vertex implements Comparable<Vertex>
 			
 				};
 	}
+	
 		
 }

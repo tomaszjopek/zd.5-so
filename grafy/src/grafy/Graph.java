@@ -6,9 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.TreeSet;
 
 
 public class Graph
@@ -27,7 +24,7 @@ public class Graph
 	public void readGraph(String fileName)
 	{
 		Scanner sc = null;
-		
+		int i = 0;
 		try
 		{
 			sc = new Scanner(new File(fileName));
@@ -41,11 +38,13 @@ public class Graph
 								
 				if(!isExisting(v1))
 				{
-					vertexes.add(new Vertex(v1));
+					vertexes.add(new Vertex(i,v1));
+					++i;
 				}
 				if(!isExisting(v2))
 				{
-					vertexes.add(new Vertex(v2));
+					vertexes.add(new Vertex(i,v2));
+					++i;
 				}							
 			}
 			
@@ -79,11 +78,22 @@ public class Graph
 	}
 	
 	public void print()
-	{					
+	{		
+		System.out.println("Spis wszystkich krawedzi:");
 		for(Edge e : edges)
 		{
 			System.out.println(e);
 		}
+	}
+	
+	public void printVertexes()
+	{
+		System.out.println("\nIdentyfikatory wierzcholkow:");
+		for(Vertex v : vertexes)
+		{
+			v.print();
+		}
+		System.out.println();
 	}
 	
 	private void createNeighbourhood()
